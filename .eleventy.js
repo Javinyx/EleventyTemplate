@@ -1,8 +1,19 @@
+// Date formatting library
+const { DateTime } = require("luxon");
+
 module.exports = function (eleventyConfig) {
 
     // Watch CSS changes
     eleventyConfig.addPassthroughCopy("./src/css");
     eleventyConfig.addWatchTarget("./src/css/");
+
+    // Date formatting
+    eleventyConfig.addFilter("postDate", (dateObj) => {
+        return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+    });
+
+    // Add admin panel to static site
+    eleventyConfig.addPassthroughCopy("./src/admin");
 
     // Random fact
     eleventyConfig.addFilter("randomItem", (arr) => {
