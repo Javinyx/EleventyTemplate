@@ -1,8 +1,22 @@
 module.exports = function (eleventyConfig) {
-       return {
-         dir: {
-           input: "src",
-           output: "public",
-         },
-       };
-     };
+
+    // Watch CSS changes
+    eleventyConfig.addPassthroughCopy("./src/css");
+    eleventyConfig.addWatchTarget("./src/css/");
+
+    // Random fact
+    eleventyConfig.addFilter("randomItem", (arr) => {
+        arr.sort(() => {
+            return 0.5 - Math.random();
+        });
+        return arr.slice(0, 1);
+    });
+
+    // Input and Output files
+    return {
+        dir: {
+            input: "src",
+            output: "public"
+        }
+    };
+};

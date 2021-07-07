@@ -1,5 +1,5 @@
 ---
-title: My first post
+title: Test 2
 ---
 # My name is pippo
 
