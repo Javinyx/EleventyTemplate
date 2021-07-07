@@ -4,8 +4,13 @@ const { DateTime } = require("luxon");
 module.exports = function (eleventyConfig) {
 
     // Watch CSS changes
+    eleventyConfig.addWatchTarget("./src/sass/");
     eleventyConfig.addPassthroughCopy("./src/css");
-    eleventyConfig.addWatchTarget("./src/css/");
+
+    // Open on Chrome upon starting && SCSS for BrowserSync
+    eleventyConfig.setBrowserSyncConfig({
+        open: true,
+      });
 
     // Date formatting
     eleventyConfig.addFilter("postDate", (dateObj) => {
