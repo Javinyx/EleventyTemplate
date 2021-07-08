@@ -1,5 +1,5 @@
 {
-    "name": "javinyx-blog",
+    "name": "eleventy-blog",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -14,15 +14,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Javinyx/javinyx-blog.git"
+        "url": "git+https://github.com/Javinyx/eleventy-blog.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Javinyx/javinyx-blog/issues"
+        "url": "https://github.com/Javinyx/eleventy-blog/issues"
     },
-    "homepage": "https://github.com/Javinyx/javinyx-blog#readme",
+    "homepage": "https://github.com/Javinyx/eleventy-blog#readme",
     "dependencies": {
         "@11ty/eleventy": "^0.12.1"
     },
